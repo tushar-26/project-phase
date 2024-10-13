@@ -14,8 +14,6 @@ $conn = mysqli_connect($db_server,
 
 if(!$conn){
     die("not conneted");
-}else{
-    echo "connected";
 }
 
 ?>
