@@ -1,5 +1,4 @@
 <?php 
-
 session_start();
 if (isset($_SESSION["user"])){
     header("Location: index.php");
@@ -59,13 +58,30 @@ if (isset($_SESSION["user"])){
                     header("Location: index.php");
                     die();
                 }else{
-                    echo '<p style="background-color:red; color: black; font-size: 20px; font-weight: bold; font-family: arial; margin-left: 40px;">
-                    password doesnt match ' . '</p>';
+                  
+                    echo '<div id="error-message" style="background-color:none; color: skyblue; font-size:17px; font-weight:bold;
+                 font-family:Arial; margin-left:120px; margin-top:100px; padding: 7px 25px 7px 25px; box-shadow: red inset 0 0 15px;">
+                Password doesn\'t match 
+                 </div>';
+              echo '<script>
+            setTimeout(function() {
+                document.getElementById("error-message").style.display = "none";
+            }, 5000); // 5000 milliseconds = 5 seconds
+             </script>';
+ 
                 }
 
             }else{
-                echo '<p style="background-color:red; color: black; font-size: 20px; font-weight: bold; font-family: arial;">
-                    email doesnt match ' . '</p>';
+                  
+                echo '<div id="error-message" style="background-color:none; color: skyblue; font-size:17px; font-weight:bold;
+                font-family:Arial; margin-left: 100px; margin-top: -48px; padding: 7px 25px 7px 25px; box-shadow: red inset 0 0 15px;">
+               Email doesn\'t match 
+                </div>';
+             echo '<script>
+           setTimeout(function() {
+               document.getElementById("error-message").style.display = "none";
+           }, 4000); // 4000 milliseconds = 4 seconds
+            </script>';
             }
 
            }

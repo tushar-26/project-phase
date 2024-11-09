@@ -44,7 +44,7 @@ if (isset($_SESSION["user"])){
             <?php 
             if(isset($_POST["Signup"])){
 
-                $first_name = $_POST["fname"];   
+                $first_name = $_POST["fname"];
                 $last_name = $_POST["lname"];
                 $email = $_POST["email"];
                 $password = $_POST["password"];
